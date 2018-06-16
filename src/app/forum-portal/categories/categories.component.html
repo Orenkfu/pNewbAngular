@@ -1,0 +1,17 @@
+<div *ngIf="categories" class="container">
+  <mat-accordion>
+    <mat-expansion-panel *ngFor='let cat of categories'>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{cat.name}}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{cat.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <forum-list [category]="cat"></forum-list>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+</div>

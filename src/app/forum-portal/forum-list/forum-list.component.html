@@ -1,0 +1,12 @@
+<div *ngIf='forums'>
+  <mat-list>
+    <div *ngFor='let forum of forums; last as l'>
+      <mat-list-item>
+        <a [routerLink]="['/forums/', forum.id]">
+          {{forum.name}}
+        </a>
+      </mat-list-item>
+      <mat-divider *ngIf="!l"></mat-divider>
+    </div>
+  </mat-list>
+</div>
